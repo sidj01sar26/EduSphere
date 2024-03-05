@@ -1,17 +1,11 @@
-import Template from "../components/Auth/Template";
-import loginImg from "../assets/login.png";
+import React from 'react';
 
-function Login({ setIsLoggedIn }) {
+const Login = ({ isLoggedIn }) => {
   return (
-    <Template
-      title="Welcome Back"
-      description1="Build skills for today, tomorrow, and beyond."
-      description2="Education to future-proof your career."
-      image={loginImg}
-      formType="login"
-      setIsLoggedIn={setIsLoggedIn}
-    />
-  );
+    <div className='flex justify-center items-center text-white text-3xl h-full'>
+      Login
+    </div>
+  )
 }
 
 export default Login;
