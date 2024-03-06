@@ -15,7 +15,7 @@ const Navbar = (props) => {
             </Link>
 
             <nav>
-                <ul className='text-richblack-100 flex gap-x-6'>
+                <ul className='text-richblack-100 text-xl flex gap-x-6 font-semibold'>
                     <li>
                         <Link to="/">Home</Link>
                     </li>
@@ -33,19 +33,15 @@ const Navbar = (props) => {
                 {!isLoggedIn &&
                     <Link to="/login">
                         <button className='bg-richblack-800 text-richblack-100 py-[8px] 
-                        px-[12px] rounded-[8px] border border-richblack-700'>
-                            Log In
+                        px-[12px] rounded-[8px] border border-richblack-700 hover:border-richblack-200'>
+                            Log in
                         </button>
                     </Link>
                 }
                 {!isLoggedIn &&
                     <Link to="/signup">
-                        <button onClick={() => {
-                            setIsLoggedIn(false);
-                            toast.success("Logged Out");
-                        }}
-                            className='bg-richblack-800 text-richblack-100 py-[8px] 
-                            px-[12px] rounded-[8px] border border-richblack-700'>
+                        <button className='bg-richblack-800 text-richblack-100 py-[8px] 
+                        px-[12px] rounded-[8px] border border-richblack-700 hover:border-richblack-200'>
                             Sign Up
                         </button>
                     </Link>
