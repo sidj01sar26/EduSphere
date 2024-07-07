@@ -1,4 +1,4 @@
-const BASE_URL = "https://edusphere-backend-qtws.onrender.com/api/v1"
+const BASE_URL = "https://edusphere-backend-8p75.onrender.com/api/v1"
 
 // AUTH ENDPOINTS
 export const endpoints = {
