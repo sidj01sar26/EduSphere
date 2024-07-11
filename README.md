@@ -67,7 +67,7 @@ The front end is part of the platform that the user interacts with. It's like th
 - **Other Relevant Pages:** Includes user and course management tools.
 
 **Frameworks and Tools:**
-Built with ReactJS for dynamic interfaces, styled using CSS and Tailwind for responsiveness. Additional npm packages enhance functionality. State management handled by Redux. Developed in VSCode for an efficient coding environment.
+Built with ReactJS for dynamic interfaces, styled using CSS and Tailwind for responsiveness. Additional npm packages enhance functionality. State management is handled by Redux. Developed in VSCode for an efficient coding environment.
 
 ## Back-end
 
@@ -95,7 +95,7 @@ EduSphere employs a monolithic architecture, utilizing Node.js and Express.js fo
 - **Student Schema:** Includes fields like name, email, password, and course details.
 - **Instructor Schema:** Includes fields like name, email, password, and course details.
 - **Course Schema:** Includes fields like course name, description, instructor details, and media content.
-  <h1 align="center"><img src="images/archi.png" height = "540px"width="720px" ></h1>
+  <h1 align="center"><img src="images/archi.png" height = "540px"width="810px" ></h1>
 
 ## API Design:
 
