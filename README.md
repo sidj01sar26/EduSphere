@@ -38,7 +38,7 @@ Utilizes MongoDB, a NoSQL database for flexible storage of course materials (vid
 
 **Architecture Diagram**
 High-level diagram illustrating the EduSphere ed-tech platform architecture.
-
+<h1 align="center"><img src="images/flow.png" height = "240px"width="720px" ></h1>
 
 ## Front-end
 The front end is part of the platform that the user interacts with. It's like the "face" of the platform that the user sees and interacts with.
@@ -95,6 +95,7 @@ EduSphere employs a monolithic architecture, utilizing Node.js and Express.js fo
 - **Student Schema:** Includes fields like name, email, password, and course details.
 - **Instructor Schema:** Includes fields like name, email, password, and course details.
 - **Course Schema:** Includes fields like course name, description, instructor details, and media content.
+  <h1 align="center"><img src="images/archi.png" height = "540px"width="720px" ></h1>
 
 ## API Design:
 
