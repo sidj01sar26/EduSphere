@@ -1,13 +1,15 @@
 const express = require("express");
 const app = express();
+
 const userRoutes = require("./routes/User");
 const profileRoutes = require("./routes/Profile");
 const paymentRoutes = require("./routes/Payment");
 const courseRoutes = require("./routes/Course");
+
 const database = require("./config/database");
 const cookieParser = require("cookie-parser");
 const cors = require("cors");
-const { cloudinaryConnect } = require("./config/cloudinary");
+const {cloudinaryConnect} = require("./config/cloudinary");
 const fileUpload = require("express-fileupload");
 const dotenv = require("dotenv");
 
@@ -54,21 +56,3 @@ app.get("/", (req, res) => {
 app.listen(PORT, () => {
     console.log(`App is running at ${PORT}`)
 })
-function convertSecondsToDuration(totalSeconds) {
-    //     const hours = Math.floor(totalSeconds / 3600)
-    //     const minutes = Math.floor((totalSeconds % 3600) / 60)
-    //     const seconds = Math.floor((totalSeconds % 3600) % 60)
-    //     if (hours > 0) {
-    //         return `${hours}h ${minutes}m`
-    //     }
-    //     else if (minutes > 0) {
-    //         return `${minutes}m ${seconds}s`
-    //     }
-    //     else {
-    //         return `${seconds}s`
-    //     }
-    // }
-    // module.exports = {
-    //     convertSecondsToDuration
-    // }
-}

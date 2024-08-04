@@ -5,8 +5,11 @@ const BASE_URL = "https://ed-backend-xssm.onrender.com/api/v1"
 
 =======
 const BASE_URL = process.env.REACT_APP_BASE_URL
+<<<<<<< HEAD
 // const BASE_URL = "http://localhost:4000/api/v1"
 >>>>>>> cc12bde (auth + Db)
+=======
+>>>>>>> 97fe60f (done)
 
 // AUTH ENDPOINTS
 export const endpoints = {

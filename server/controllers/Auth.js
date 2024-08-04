@@ -9,6 +9,7 @@ const { passwordUpdated } = require("../mail/templates/passwordUpdate");
 require("dotenv").config();
 
 //sendOTP
+
 exports.sendotp = async (req, res) => {
     try{
 

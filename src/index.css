@@ -1,3 +1,109 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+.highlight__text{
+    background: var(--gradient-05, linear-gradient(138deg, #1FA2FF 0%, #12D8FA 50%, #A6FFCB 100%));
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+
+.codeblock1{
+    width: 372.95px;
+    height: 257.05px;
+    border-radius: 100%;
+    left: calc(50% - 372.95px / 2 - 76.53px);
+    top: calc(50% - 257.05px / 2 - 47.47px);
+    background: linear-gradient(
+        123.77deg,
+        #8a2be2 -6.46%,
+        #ffa500 59.04%,
+        #f8f8ff 124.53%
+    );
+    opacity: 0.2;
+    filter: blur(34px);
+    transform: matrix(1, 0, -0.03, 1, 0, 0);
+}
+
+.codeblock2{
+    position: absolute;
+    width: 372.95px;
+    height: 257.05px;
+    left: calc(50% - 372.95px / 2 - 76.53px);
+    top: calc(50% - 257.05px / 2 - 47.47px);
+    border-radius: 100%;
+    background: linear-gradient(
+        118.19deg,
+        #1fa2ff -3.62%,
+        #12d8fa 50.44%,
+        #a6ffcb 104.51%
+    );
+    opacity: 0.2;
+    filter: blur(34px);
+    transform: matrix(1, 0, -0.03, 1, 0, 0);
+}
+
+.homepage__bgimage{
+    background: url("../src/assets/Images/bghome.svg");
+}
+
+.spinner{
+    width: 31.4px;
+   height: 31.4px;
+   border-radius: 50%;
+   background: #ffd82e;
+   transform-origin: top;
+   display: grid;
+   animation: colorful-3vgb5t 1s infinite linear;
+}
+
+.spinner::before,
+.spinner::after {
+   content: "";
+   grid-area: 1/1;
+   background: #049069;
+   border-radius: 50%;
+   transform-origin: top;
+   animation: inherit;
+   animation-name: spinner-k94uub;
+}
+
+.spinner::after {
+   background: #073b4c;
+   --s: 180deg;
+}
+
+@keyframes spinner-3vgb5t {
+   0%, 20% {
+      transform: rotate(0);
+   }
+
+   100% {
+      transform: rotate(360deg);
+   }
+}
+
+@keyframes spinner-k94uub {
+   50% {
+      transform: rotate(var(--s,90deg));
+   }
+
+   100% {
+      transform: rotate(0);
+   }
+}
+
+.lable-style {
+   @apply text-[14px] text-richblack-5;
+}
+
+.form-style {
+   @apply rounded-lg bg-richblack-700 p-3 text-[16px] leading-[24px] text-richblack-5 shadow-[0_1px_0_0] shadow-white/50 placeholder:text-richblack-400 focus:outline-none;
+ }
+ .section_heading {
+   @apply text-2xl font-bold text-richblack-5 lg:text-4xl;
+ }
+ .blackButton {
+   @apply cursor-pointer rounded-md bg-richblack-800 px-[20px] py-[8px] font-semibold text-richblack-5;
+ }
+ .redButton {
+   @apply cursor-pointer rounded-md bg-pink-200 px-[20px] py-[8px] font-semibold text-richblack-5;
+ }

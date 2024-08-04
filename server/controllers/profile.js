@@ -6,6 +6,7 @@ const CourseProgress = require("../models/CourseProgress");
 const { default: mongoose } = require("mongoose");
 const Course = require("../models/Course");
 
+
 exports.updateProfile = async (req, res) => {
     try{
 
