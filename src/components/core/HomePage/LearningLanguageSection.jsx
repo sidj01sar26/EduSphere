@@ -1,45 +1,51 @@
 import React from 'react'
 import HighlightText from './HighlightText'
-import CTAButton from "../../../components/core/HomePage/Button";
-import Know_your_progress from "../../../assets/Images/Know_your_progress.png";
-import Compare_with_others from "../../../assets/Images/Compare_with_others.svg";
-import Plan_your_lessons from "../../../assets/Images/Plan_your_lessons.svg";
+
+import progressImage from "../../../assets/Images/Know_your_progress.png"
+import compareImage from "../../../assets/Images/Compare_with_others.png"
+import lessonImage from "../../../assets/Images/Plan_your_lessons.png"
+
+import CTAButton from '../HomePage/Button'
+
+
 
 const LearningLanguageSection = () => {
   return (
     <div>
-        <div className="text-4xl font-semibold text-center my-10">
-            Your swiss knife for
-            <HighlightText text={"learning any language"} />
-            <div className="text-center text-richblack-700 font-medium lg:w-[75%] mx-auto leading-6 text-base mt-3">
-              Using spin making learning multiple languages easy. with 20+
-              languages realistic voice-over, progress tracking, custom schedule
-              and more.
-            </div>
-            <div className="flex flex-col lg:flex-row items-center justify-center mt-8 lg:mt-0">
-              <img
-                src={Know_your_progress}
-                alt=""
-                className="object-contain  lg:-mr-32 "
-              />
-              <img
-                src={Compare_with_others}
-                alt=""
-                className="object-contain lg:-mb-10 lg:-mt-0 -mt-12"
-              />
-              <img
-                src={Plan_your_lessons}
-                alt=""
-                className="object-contain  lg:-ml-36 lg:-mt-5 -mt-16"
-              />
-            </div>
-          </div>
+      <div className=' flex flex-col items-center gap-14'>
 
-          <div className="w-fit mx-auto lg:mb-20 mb-8 -mt-5">
-            <CTAButton active={true} linkto={"/signup"}>
-              <div className="">Learn More</div>
+        {/* Part 1 */}
+        <div className=' flex gap-3 flex-col px-[220px] items-center mt-[120px]'>
+            <h3 className=' text-4xl font-semibold text-center text-richblack-900'>Your swiss knife for <HighlightText text={"learning any language"}/> </h3>
+            <p className=' text-base font-medium text-richblack-500 text-center'>Using spin making learning multiple languages easy. with 20+ languages realistic voice-over, progress tracking, custom schedule and more.</p>
+        </div>
+
+        {/* Part 2 */}
+        <div className=' flex flex-row items-center justify-center'>
+            <img 
+                src={progressImage} 
+                alt="" 
+                className=' object-contain -mr-32'
+            />
+            <img 
+                src={compareImage} 
+                alt="" 
+                className=' object-contain -mr-32'
+            />
+            <img 
+                src={lessonImage} 
+                alt="" 
+            />
+        </div>
+
+        {/* Part 3 */}
+        <div className=' flex justify-center items-start'>
+            <CTAButton active={true} linkto={"/signup"} >
+                Learn More
             </CTAButton>
-          </div>
+        </div>
+
+      </div>
     </div>
   )
 }

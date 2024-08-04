@@ -1,11 +1,9 @@
-// Importing necessary modules and packages
 const express = require("express");
 const app = express();
-const userRoutes = require("./routes/user");
-const profileRoutes = require("./routes/profile");
+const userRoutes = require("./routes/User");
+const profileRoutes = require("./routes/Profile");
+const paymentRoutes = require("./routes/Payment");
 const courseRoutes = require("./routes/Course");
-const paymentRoutes = require("./routes/Payments");
-const contactUsRoute = require("./routes/Contact");
 const database = require("./config/database");
 const cookieParser = require("cookie-parser");
 const cors = require("cors");
@@ -13,16 +11,13 @@ const { cloudinaryConnect } = require("./config/cloudinary");
 const fileUpload = require("express-fileupload");
 const dotenv = require("dotenv");
 
-// Setting up port number
+dotenv.config();
 const PORT = process.env.PORT || 4000;
 
-// Loading environment variables from .env file
-dotenv.config();
+// DATABASE CONNECT
+database.connect()
 
-// Connecting to database
-database.connect();
-
-// Middlewares
+// MIDDLEWARES
 app.use(express.json());
 app.use(cookieParser());
 app.use(
@@ -30,35 +25,50 @@ app.use(
         origin: "*",
         credentials: true,
     })
-);
+)
 app.use(
     fileUpload({
         useTempFiles: true,
-        tempFileDir: "/tmp/",
+        tempFileDir: "/tmp",
     })
-);
+)
 
-// Connecting to cloudinary
+// CLOUDINARY CONNECT
 cloudinaryConnect();
 
-// Setting up routes
+// ROUTES
 app.use("/api/v1/auth", userRoutes);
 app.use("/api/v1/profile", profileRoutes);
-app.use("/api/v1/course", courseRoutes);
 app.use("/api/v1/payment", paymentRoutes);
-app.use("/api/v1/reach", contactUsRoute);
+app.use("/api/v1/course", courseRoutes);
 
-// Testing the server
+// DEFAULT ROUTE
 app.get("/", (req, res) => {
     return res.json({
         success: true,
-        message: "Your server is up and running ...",
+        message: "Your server is up and running"
     });
 });
 
-// Listening to the server
+// ACTIVATE THE SERVER
 app.listen(PORT, () => {
-    console.log(`App is listening at ${PORT}`);
-});
-
-// End of code.
+    console.log(`App is running at ${PORT}`)
+})
+function convertSecondsToDuration(totalSeconds) {
+    //     const hours = Math.floor(totalSeconds / 3600)
+    //     const minutes = Math.floor((totalSeconds % 3600) / 60)
+    //     const seconds = Math.floor((totalSeconds % 3600) % 60)
+    //     if (hours > 0) {
+    //         return `${hours}h ${minutes}m`
+    //     }
+    //     else if (minutes > 0) {
+    //         return `${minutes}m ${seconds}s`
+    //     }
+    //     else {
+    //         return `${seconds}s`
+    //     }
+    // }
+    // module.exports = {
+    //     convertSecondsToDuration
+    // }
+}

@@ -1,25 +1,16 @@
-const express = require("express")
-const router = express.Router()
-const { auth, isInstructor } = require("../middleware/auth")
-const {
-  deleteAccount,
-  updateProfile,
-  getAllUserDetails,
-  updateDisplayPicture,
-  getEnrolledCourses,
-  instructorDashboard,
-} = require("../controllers/profile")
+const express = require("express");
+const router = express.Router();
 
-// ********************************************************************************************************
-//                                      Profile routes
-// ********************************************************************************************************
-// Delet User Account
-router.delete("/deleteProfile", auth, deleteAccount)
-router.put("/updateProfile", auth, updateProfile)
-router.get("/getUserDetails", auth, getAllUserDetails)
-// Get Enrolled Courses
-router.get("/getEnrolledCourses", auth, getEnrolledCourses)
-router.put("/updateDisplayPicture", auth, updateDisplayPicture)
-router.get("/instructorDashboard", auth, isInstructor, instructorDashboard)
+// IMPORT CONTROLLERS
+const {updateProfile, deleteAccount, getAllUserDetails, updateDisplayPictue, getEnrolledCourse, instructorDashboard} = require("../controllers/Profile");
+const {auth, isInstructor} = require("../middlewares/auth");
 
-module.exports = router
+// DEFINE API ROUTES
+router.put("/updateprofile", auth, updateProfile);
+router.delete("/deleteaccount", auth, deleteAccount);
+router.get("/getalluserdetails", auth, getAllUserDetails);
+router.put("/updateDisplayPictue", auth, updateDisplayPictue);
+router.get("/getEnrolledCourse", auth, getEnrolledCourse);
+router.get("/instructorDashboard", auth, isInstructor , instructorDashboard);
+
+module.exports = router;

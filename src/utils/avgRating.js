@@ -6,8 +6,7 @@ export default function GetAvgRating(ratingArr) {
   }, 0)
 
   const multiplier = Math.pow(10, 1)
-  const avgReviewCount =
-    Math.round((totalReviewCount / ratingArr?.length) * multiplier) / multiplier
+  const avgRatingCount = Math.round((totalReviewCount / ratingArr?.length) * multiplier) / multiplier
 
-  return avgReviewCount
+  return avgRatingCount
 }
