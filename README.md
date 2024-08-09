@@ -102,34 +102,34 @@ EduSphere employs a monolithic architecture, utilizing Node.js and Express.js fo
 The EduSphere platform's API is designed following the REST architectural style. The API is implemented using Node.js and Express.js. It uses JSON for data exchange and follows standard HTTP request methods such as GET, POST, PUT, and DELETE.
 <br>
 **Sample list of API endpoints and their functionalities:**
-1.	_/api/auth/signup (POST)_ - Create a new user (student or instructor) account.
-2.	_/api/auth/login (POST)_ – Log in using existing credentials and generate a JWT token.
-3.	_/api/auth/verify-otp (POST)_ - Verify the OTP sent to the user's registered email.
-4.	_/api/auth/forgot-password (POST)_ - Send an email with a password reset link to the registered email.
-5.	_/api/courses (GET)_ - Get a list of all available courses.
-6.	_/api/courses/:id (GET)_ - Get details of a specific course by ID.
-7.	_/api/courses (POST)_ - Create a new course.
-8.	_/api/courses/:id (PUT)_ - Update an existing course by ID.
-9.	_/api/courses/:id (DELETE)_ - Delete a course by ID.
-10.	_/api/courses/:id/rate (POST)_ - Add a rating (out of 5) to a course.
+1.	_`/api/auth/signup` (POST)_ - Create a new user (student or instructor) account.
+2.	_`/api/auth/login` (POST)_ – Log in using existing credentials and generate a JWT token.
+3.	_`/api/auth/verify-otp` (POST)_ - Verify the OTP sent to the user's registered email.
+4.	_`/api/auth/forgot-password` (POST)_ - Send an email with a password reset link to the registered email.
+5.	_`/api/courses` (GET)_ - Get a list of all available courses.
+6.	_`/api/courses/:id` (GET)_ - Get details of a specific course by ID.
+7.	_`/api/courses` (POST)_ - Create a new course.
+8.	_`/api/courses/:id` (PUT)_ - Update an existing course by ID.
+9.	_`/api/courses/:id` (DELETE)_ - Delete a course by ID.
+10.	_`/api/courses/:id/rate` (POST)_ - Add a rating (out of 5) to a course.
 <br>
 
 **Sample API requests and responses:**
 <br>
-1.	GET _/api/courses_: Get all courses <br>
+1.	GET _`/api/courses`_: Get all courses <br>
 ●	Response: A list of all courses in the database
-3.	GET _/api/courses/:id:_ Get a single course by ID <br>
+3.	GET _`/api/courses/:id:`_ Get a single course by ID <br>
 ●	Response: The course with the specified ID
-4.	POST _/api/courses_: Create a new course <br>
+4.	POST _`/api/courses`_: Create a new course <br>
 ●	Request: The course details in the request body
 ●	Response: The newly created course
-5.	PUT _/api/courses/:id:_ Update an existing course by ID <br>
+5.	PUT _`/api/courses/:id:`_ Update an existing course by ID <br>
 ●	Request: The updated course details in the request body
 ●	Response: The updated course
-6.	DELETE _/api/courses/:id: _Delete a course by ID <br>
+6.	DELETE _`/api/courses/:id:`_ Delete a course by ID <br>
 ●	Response: A success message indicating that the course has been deleted.
 <br><br>
-In conclusion, the REST API design for the EduSphere ed-tech platform is a crucial part of the project. The API endpoints and their functionalities are designed to ensure seamless communication between the front-end and back-end of the application. By following RESTful principles, the API will be scalable, maintainable, and reliable. The sample API requests and responses provided above illustrate how each endpoint will function and what kind of data it will accept or return. With this API design, EduSphere will be able to provide a smooth user experience while ensuring security and stability.
+In conclusion, the REST API design for the EduSphere ed-tech platform is a crucial part of the project. The API endpoints and their functionalities are designed to ensure seamless communication between the front-end and back-end of the application. The API will be scalable, maintainable, and reliable by following RESTful principles. The sample API requests and responses above illustrate how each endpoint will function and what kind of data it will accept or return. With this API design, EduSphere will be able to provide a smooth user experience while ensuring security and stability.
 
 ## Deployment
 
