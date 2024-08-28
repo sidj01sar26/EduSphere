@@ -178,7 +178,7 @@ const Footer = () => {
           </div>
 
           <div className=' text-center'>
-            Made with ❤️ Palash Bag © {new Date().getFullYear()} Studynotion
+            Made with ❤️ Siddharth Joisar © {new Date().getFullYear()} Studynotion
           </div>
         </div>
       </div>
